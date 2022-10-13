@@ -1,0 +1,18 @@
+Command: /home/wcz/prj/eecourse/./simv -l sim.log
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Oct 13 19:30 2022
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+                  20:full_adder_tb resetting ...
+                  60:full_adder_tb resetting ...
+                 100:full_adder_tb resetting finish
+                 140:full_adder_tb resetting finish
+                 180:full_adder_tb resetting finish
+                 220:full_adder_tb resetting finish
+                 260:full_adder_tb resetting finish
+$finish called from file "full_adder_tb.v", line 42.
+$finish at simulation time                  300
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 300 ns
+CPU Time:      0.210 seconds;       Data structure size:   0.0Mb
+Thu Oct 13 19:30:37 2022

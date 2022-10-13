@@ -1,0 +1,9 @@
+#!/bin/sh -h 
+PYTHONHOME=/home/wcz/tools/Synopsys/vcs_2018.9/vcs/O-2018.09-SP2/etc/search/pyh
+export PYTHONHOME
+PYTHONPATH=/home/wcz/tools/Synopsys/vcs_2018.9/vcs/O-2018.09-SP2/linux64/lib/pylib27
+export PYTHONPATH
+LD_LIBRARY_PATH=/home/wcz/tools/Synopsys/vcs_2018.9/vcs/O-2018.09-SP2/linux64/lib:/home/wcz/tools/Synopsys/vcs_2018.9/vcs/O-2018.09-SP2/linux64/lib/pylib27
+export LD_LIBRARY_PATH
+/home/wcz/tools/Synopsys/vcs_2018.9/vcs/O-2018.09-SP2/linux64/bin/vcsfind_create_index.exe  -z  "/home/wcz/prj/eecourse/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" "/home/wcz/prj/eecourse/simv.daidir/debug_dump/fsearch/./idents_7uuziP.xml.gz" -o "/home/wcz/prj/eecourse/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+\mv "/home/wcz/prj/eecourse/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/wcz/prj/eecourse/simv.daidir/debug_dump/fsearch/fsearch.db"

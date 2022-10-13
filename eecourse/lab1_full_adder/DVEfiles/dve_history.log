@@ -1,0 +1,86 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/wcz/prj/eecourse/vcdplus.vpd -design V1}}
+gui_set_state_value -category Layout -key child_console_docknewline -value false
+gui_set_state_value -category Layout -key child_console_dockstate -value undocked
+gui_set_state_value -category Layout -key child_console_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_console_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_console_showstate -value maximized
+gui_set_state_value -category Layout -key child_console_size_x -value 1447
+gui_set_state_value -category Layout -key child_console_size_y -value 713
+gui_set_state_value -category Layout -key child_data_size_x -value 197
+gui_set_state_value -category Layout -key child_data_size_y -value 744
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_size_x -value 197
+gui_set_state_value -category Layout -key child_hier_size_y -value 744
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 1447
+gui_set_state_value -category Layout -key child_source_size_y -value 739
+gui_set_state_value -category Layout -key main_pos_x -value 563
+gui_set_state_value -category Layout -key main_pos_y -value 379
+gui_set_state_value -category Layout -key main_size_x -value 2401
+gui_set_state_value -category Layout -key main_size_y -value 1204
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file /home/wcz/prj/eecourse/vcdplus.vpd -design V1
+gui_list_select -id Data.1 -selected  { full_adder_tb.ain   }
+gui_list_select_all -id Data.1
+gui_list_select -id Data.1 -selected  { full_adder_tb.cin   }
+gui_list_select_all -id Data.1
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { full_adder_tb.ain full_adder_tb.bin full_adder_tb.cin full_adder_tb.sumout full_adder_tb.cout full_adder_tb.clk full_adder_tb.reset_n {full_adder_tb.CLK_PERIOD[31:0]} } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 578
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 150
+gui_marker_select -id  Wave.1 { C1 }
+gui_get_drivers -id Wave.1 -signal full_adder_tb.ain
+gui_list_select -id Wave.1 -selected  { full_adder_tb.sumout   }
+gui_get_drivers -id Wave.1 -signal full_adder_tb.sumout
+gui_src_highlight_item -id Source.1 -lfrom 9 -idxfrom 14 -fileIdFrom 0 -lto 9 -idxto 21 -fileIdTo 0 -selection {sum_out} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 9 -idxfrom 8 -fileIdFrom 0 -lto 9 -idxto 13 -fileIdTo 0 -selection {c_out} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 9 -idxfrom 14 -fileIdFrom 0 -lto 9 -idxto 21 -fileIdTo 0 -selection {sum_out} -selectionId 0 -replace 0
+gui_show_drivers -signal  full_adder_tb.u_full_adder.sum_out
+gui_get_drivers -id Source.1 -signal full_adder_tb.u_full_adder.sum_out
+gui_src_highlight_item -id Source.1 -lfrom 9 -idxfrom 14 -fileIdFrom 0 -lto 9 -idxto 21 -fileIdTo 0 -selection {sum_out} -selectionId 0 -replace 0
+gui_show_drivers -signal  full_adder_tb.u_full_adder.sum_out
+gui_get_drivers -id Source.1 -signal full_adder_tb.u_full_adder.sum_out
+gui_do_show_driver_load TopLevel.1
+gui_get_drivers -id Source.1 -signal full_adder_tb.u_full_adder.sum_out
+gui_do_show_driver_load TopLevel.1
+gui_list_select -id DriverLoad.1 -selected  { {V1:full_adder_tb.sumout 130 1}   }
+gui_do_show_driver_load TopLevel.1
+gui_list_select -id DriverLoad.1 -selected  { {full_adder_tb.v 38 2.4}   }
+gui_do_show_driver_load TopLevel.1
+gui_do_show_driver_load TopLevel.1
+gui_list_select -id DriverLoad.1 -selected  { {full_adder_tb.v 34 2.0}   }
+gui_list_select -id DriverLoad.1 -selected  { {full_adder_tb.v 37 2.3}   }
+gui_list_select -id DriverLoad.1 -selected  { {full_adder_tb.v 36 2.2}   }
+gui_list_select -id Wave.1 -selected  { full_adder_tb.sumout   }
+gui_list_action -id  Wave.1 full_adder_tb.sumout
+gui_get_drivers -id Wave.1 -signal full_adder_tb.sumout
+gui_src_highlight_item -id Source.1 -lfrom 9 -idxfrom 14 -fileIdFrom 0 -lto 9 -idxto 21 -fileIdTo 0 -selection {sum_out} -selectionId 0 -replace 0
+gui_list_select -id Data.1 -selected  {  }
+gui_src_highlight_item -id Source.1 -lfrom 9 -idxfrom 14 -fileIdFrom 0 -lto 9 -idxto 21 -fileIdTo 0 -selection {sum_out} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 9 -idxfrom 14 -fileIdFrom 0 -lto 9 -idxto 21 -fileIdTo 0 -selection {sum_out} -selectionId 0 -replace 0
+gui_show_drivers -signal  full_adder_tb.u_full_adder.sum_out
+gui_get_drivers -id Source.1 -signal full_adder_tb.u_full_adder.sum_out
+gui_list_select -id DriverLoad.1 -selected  { {full_adder.v 9 1.0}   }
+gui_list_select -id DriverLoad.1 -selected  { {full_adder.v 9 0.0}   }
+gui_list_select -id DriverLoad.1 -selected  { {full_adder_tb.v 34 2.0}   }
+gui_list_select -id DriverLoad.1 -selected  { {V1:full_adder_tb.ain 150 2}   }
+gui_do_show_driver_load TopLevel.1
+gui_list_select -id DriverLoad.1 -selected  { {full_adder_tb.v 37 2.3}   }
+gui_do_show_driver_load TopLevel.1
+gui_close_window -window TopLevel.1
+gui_close_window -window TopLevel.2
